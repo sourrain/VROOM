@@ -38,11 +38,11 @@
       </div>
       <nav class="w-3/5 p-4 flex items-center justify-evenly">
         <router-link to="/pricing">Pricing</router-link>
-        <router-link to="/template">Template</router-link>
         <router-link to="/community">Community</router-link>
-        <router-link to="/theatre">VROOM Theatre</router-link>
+        <router-link to="/theatre">Theatre</router-link>
         <router-link to="/company">Company</router-link>
       </nav>
+
       <div class="w-1/4 p-4 flex items-center justify-evenly">
         <div
           class="
@@ -206,6 +206,12 @@
 </template>
 
 <script>
+import RouterLink from "vue-router";
+export default {
+  components: {
+    RouterLink,
+  },
+};
 </script>
 
 <style>
