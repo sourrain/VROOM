@@ -150,4 +150,11 @@ export default {
 </script>
 
 <style>
+.divider {
+  width: 2px;
+  height: 1.25rem;
+  background-color: black;
+  margin-left: 0.5rem;
+  margin-right: 0.75rem;
+}
 </style>

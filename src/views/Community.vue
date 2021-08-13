@@ -1,9 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <undercontruction />
+  </div>
 </template>
 
 <script>
-export default {};
+import Undercontruction from "../components/Undercontruction.vue";
+export default {
+  components: {
+    Undercontruction,
+  },
+};
 </script>
 
 <style>

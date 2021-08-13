@@ -1,16 +1,11 @@
 <template>
   <button
-    class="svg-black bg-red-300"
+    class="svg-black"
     :class="{ 'is-active': isActive ? isActive() : null }"
     @click="action"
     :title="title"
   >
-    <svg
-      class="h-6 w-auto text-black fill-current"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg class="h-5 w-auto" fill="currentColor" viewBox="0 0 24 24">
       <use
         :xlink:href="
           require('remixicon/fonts/remixicon.symbol.svg') + `#ri-${icon}`

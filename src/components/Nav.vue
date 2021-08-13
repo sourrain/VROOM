@@ -16,11 +16,13 @@
         text-base
       "
     >
-      <img
-        class="h-18 p-4 w-auto mt-16"
-        alt="logo"
-        src="@/assets/logovroom.svg"
-      />
+      <router-link to="/">
+        <img
+          class="h-18 p-4 w-auto mt-16"
+          alt="logo"
+          src="@/assets/logovroom.svg"
+        />
+      </router-link>
       <div
         class="
           w-32
@@ -206,12 +208,6 @@
 </template>
 
 <script>
-import RouterLink from "vue-router";
-export default {
-  components: {
-    RouterLink,
-  },
-};
 </script>
 
 <style>
