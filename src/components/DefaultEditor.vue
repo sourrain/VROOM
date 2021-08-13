@@ -67,7 +67,7 @@ export default {
   mounted() {
     const ydoc = new Y.Doc();
     this.provider = new WebsocketProvider(
-      "ws://www.vroom-theatre.com/",
+      "ws://10.180.1.164:8080/",
       this.room,
       ydoc
     );
