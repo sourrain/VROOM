@@ -1181,6 +1181,11 @@
   dependencies:
     prosemirror-state "^1.3.4"
 
+"@tiptap/extension-image@^2.0.0-beta.15":
+  version "2.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-image/-/extension-image-2.0.0-beta.15.tgz#07bdc23c9804c830a394f78242648dd7783a469e"
+  integrity sha512-iMwQ154RPefOxgqTTHjOA735YWesyjBhYvD9fFxRDctM2vLxEYYYFOENXEBCFLNAr94gfaxefCEdkuNYHl9H7g==
+
 "@tiptap/extension-italic@^2.0.0-beta.15":
   version "2.0.0-beta.15"
   resolved "https://registry.npmjs.org/@tiptap/extension-italic/-/extension-italic-2.0.0-beta.15.tgz"
@@ -1222,7 +1227,7 @@
 
 "@tiptap/extension-text@^2.0.0-beta.13":
   version "2.0.0-beta.13"
-  resolved "https://registry.npmjs.org/@tiptap/extension-text/-/extension-text-2.0.0-beta.13.tgz"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-text/-/extension-text-2.0.0-beta.13.tgz#da0af8d9a3f149d20076e15d88c6af21fb6d940f"
   integrity sha512-0EtAwuRldCAoFaL/iXgkRepEeOd55rPg5N4FQUN1xTwZT7PDofukP0DG/2jff/Uj17x4uTaJAa9qlFWuNnDvjw==
 
 "@tiptap/starter-kit@^2.0.0-beta.89":

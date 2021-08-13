@@ -27,7 +27,9 @@
           </button>
         </div>
       </div>
-      <defaultEditor class="w-30 h-60 mt-10 border-4 border-black rounded-xl" />
+      <defaultEditor
+        class="w-30 h-auto mt-10 border-4 border-black rounded-xl"
+      />
       <div></div>
       <div class="flex-col pt-10 justify-around">
         <div class="p-4 bg-gray-300 w-full h-40">

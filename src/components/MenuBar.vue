@@ -4,6 +4,7 @@
       <div class="divider" v-if="item.type === 'divider'" />
       <menu-item v-else v-bind="item" />
     </template>
+    <!-- <button @click="addImage">add image from URL</button> -->
   </div>
 </template>
 
@@ -14,7 +15,15 @@ export default {
   components: {
     MenuItem,
   },
+  methods: {
+    addImage() {
+      const url = window.prompt("URL");
 
+      if (url) {
+        this.editor.chain().focus().setImage({ src: url }).run();
+      }
+    },
+  },
   props: {
     editor: {
       type: Object,

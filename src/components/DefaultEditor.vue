@@ -2,20 +2,39 @@
   <div v-if="editor" class="p-3 flex-col text-black">
     <menu-bar
       :editor="editor"
-      class="p-1 flex-wrap flex justify-items-center"
+      class="p-1 flex-wrap flex justify-items-center border-b-4 border-black"
     />
     <editor-content :editor="editor" class="mt-5" />
-    <div class="editor__footer">
+    <div class="text-gray-400">
+      <img class="h-40" src="../assets/vroom99.png" />
+      {{ editor.getCharacterCount() }}/{{ limit }} characters
+    </div>
+    <div
+      class="
+        flex
+        items-center
+        justify-between
+        flex-wrap
+        mt-5
+        p-1
+        border-t-4 border-black
+      "
+    >
       <div :class="`editor__status editor__status--${status}`">
         <template v-if="status === 'connected'">
-          {{ users.length }} user{{ users.length === 1 ? "" : "s" }} online in
-          {{ room }}
+          <div class="text-green-400">
+            {{ users.length }} user{{ users.length === 1 ? "" : "s" }} online in
+            {{ room }}
+          </div>
         </template>
-        <template v-else> offline </template>
+        <template v-else>
+          <div class="text-red-400">offline</div>
+        </template>
       </div>
       <div class="editor__name">
         <button @click="setName">
-          {{ currentUser.name }}
+          Your Username is:
+          <span class="text-green-400"> {{ currentUser.name }}</span>
         </button>
       </div>
     </div>
@@ -26,15 +45,16 @@
 import { Editor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 import Highlight from "@tiptap/extension-highlight";
+import TaskList from "@tiptap/extension-task-list";
+import TaskItem from "@tiptap/extension-task-item";
 import MenuBar from "./MenuBar.vue";
 import Collaboration from "@tiptap/extension-collaboration";
 import CollaborationCursor from "@tiptap/extension-collaboration-cursor";
-import TaskList from "@tiptap/extension-task-list";
-import TaskItem from "@tiptap/extension-task-item";
 import CharacterCount from "@tiptap/extension-character-count";
 import * as Y from "yjs";
 import { WebsocketProvider } from "y-websocket";
 import { IndexeddbPersistence } from "y-indexeddb";
+import Image from "@tiptap/extension-image";
 
 const getRandomElement = (list) => {
   return list[Math.floor(Math.random() * list.length)];
@@ -81,15 +101,15 @@ export default {
 
     this.editor = new Editor({
       extensions: [
-        StarterKit.configure({
-          history: false,
-        }),
+        StarterKit,
         Highlight,
         TaskList,
         TaskItem,
+        Image,
         Collaboration.configure({
           document: ydoc,
         }),
+        // Register the collaboration cursor extension
         CollaborationCursor.configure({
           provider: this.provider,
           user: this.currentUser,
@@ -101,6 +121,28 @@ export default {
           limit: 10000,
         }),
       ],
+      content: `
+        <h1>
+          Hi there,
+        </h1>
+        
+        <p>
+          this is a <em>basic</em> example of <strong>VROOM</strong>. 
+        </p>
+      
+        <p>
+          Isn’t that great? And all of that is editable. 
+        </p>
+        
+        <p>
+          I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
+        </p>
+        <blockquote>
+          Wow, that’s amazing. Good Luck! 👏
+          <br />
+          — VROOM Wizard
+        </blockquote>
+      `,
     });
 
     localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
