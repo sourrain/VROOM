@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-40 w-3/4 mx-auto max-w-7xl px-4">
+  <div class="w-3/4 mx-auto max-w-7xl px-4">
     <div>
       <h2 class="pb-12 text-5xl tracking-tight font-extrabold mt-3 text-center">
         Choose the best plan for your needs.

@@ -1,5 +1,17 @@
 <template>
-  <div class="flex p-10 mt-10 bg-black w-full h-60 text-white">
+  <div
+    class="
+      flex
+      p-10
+      mt-10
+      bg-black
+      w-full
+      h-auto
+      text-white
+      flex-wrap
+      md:flex-nowrap
+    "
+  >
     <div class="p-5 tracking-tight text-xl">VROOM</div>
     <div class="p-5 text-xs">
       <div>

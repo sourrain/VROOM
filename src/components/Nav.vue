@@ -1,51 +1,92 @@
 <template>
   <div>
-    <nav
+    <header
       class="
-        w-full
-        h-16
-        pt-6
-        pb-6
-        fixed
-        top-0
-        flex
+        flex flex-wrap
         items-center
-        justify-evenly
         bg-white bg-opacity-90
         blur-xl
         text-base
+        justify-between
+        md:fixed
+        md:top-0
+        md:w-full
       "
     >
-      <router-link to="/">
-        <img
-          class="h-18 p-4 w-auto mt-16"
-          alt="logo"
-          src="@/assets/logovroom.svg"
-        />
-      </router-link>
-      <div
-        class="
-          w-32
-          px-2
-          py-0.5
-          rounded-md
-          bg-white
-          text-xs text-black
-          border-black border-collapse border-2
-          tracking-tight
-          font-extrabold
-        "
-      >
-        1.0 PROTOTYPE
+      <div class="flex items-center">
+        <router-link to="/">
+          <img
+            class="md:h-24 p-2 h-16 w-auto mt-0"
+            alt="logo"
+            src="@/assets/logovroom.svg"
+          />
+        </router-link>
+        <div
+          class="
+            md:w-32
+            w-22
+            md:px-2
+            md:py-0.5
+            rounded-md
+            bg-white
+            text-black
+            border-black border-collapse
+            md:border-2
+            md:tracking-tight
+            md:font-extrabold
+            font-medium
+            text-xs
+            tracking-tighter
+          "
+        >
+          1.0 PROTOTYPE
+        </div>
       </div>
-      <nav class="w-3/5 p-4 flex items-center justify-evenly">
-        <router-link to="/pricing">Pricing</router-link>
-        <router-link to="/community">Community</router-link>
-        <router-link to="/theatre">Theatre</router-link>
-        <router-link to="/company">Company</router-link>
-      </nav>
 
-      <div class="w-1/4 p-4 flex items-center justify-evenly">
+      <label for="menu-toggle" class="md:hidden mr-2 cursor-pointer block">
+        <i class="ri-menu-3-fill ri-2x"></i>
+      </label>
+      <input type="checkbox" class="hidden" id="menu-toggle" />
+
+      <div class="hidden md:flex md:w-1/2 w-screen md:justify-around" id="menu">
+        <nav>
+          <ul
+            class="
+              md:flex-wrap md:flex
+              md:justify-between
+              justify-center
+              text-base
+              pl-20
+              items-center
+            "
+          >
+            <li>
+              <router-link class="md:p-4 py-3 px-0 block" to="/pricing"
+                >Pricing</router-link
+              >
+            </li>
+            <li>
+              <router-link class="md:p-4 py-3 px-0 block" to="/community"
+                >Community</router-link
+              >
+            </li>
+            <li>
+              <router-link class="md:p-4 py-3 px-0 block" to="/theatre"
+                >Theatre</router-link
+              >
+            </li>
+            <li>
+              <router-link class="md:p-4 py-3 px-0 block" to="/company"
+                >Company</router-link
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="w-1/4 p-4 items-center md:flex justify-evenly md:visible hidden"
+      >
         <div
           class="
             px-3.5
@@ -60,7 +101,7 @@
         </div>
         <div class="px-3.5 py-1.5 rounded-xl bg-black text-white">Sign up</div>
       </div>
-    </nav>
+    </header>
   </div>
 </template>
 
@@ -68,4 +109,7 @@
 </script>
 
 <style>
+#menu-toggle:checked + #menu {
+  display: block;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="flex-col justify-items-stretch">
     <navigation />
-    <router-view class="min-h-screen"></router-view>
+    <router-view class="min-h-screen mt-5 md:mt-40"></router-view>
     <footerInfo />
   </div>
 </template>
