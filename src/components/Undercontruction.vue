@@ -1,8 +1,10 @@
 <template>
-  <div class="mt-40 w-1/2 mx-auto max-w-7xl px-4">
+  <div class="md:w-1/3 w-2/3 mx-auto max-w-7xl pb-10">
     <div>
-      <img class="index-z" src="../assets/comingsoon.gif" alt="" />
-      <div class="text-3xl text-center tracking-tight font-extrabold">
+      <img src="../assets/comingsoon.gif" alt="" />
+      <div
+        class="md:text-6xl text-2xl text-center tracking-tight font-extrabold"
+      >
         This page is under construction
       </div>
     </div>
