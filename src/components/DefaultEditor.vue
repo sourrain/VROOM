@@ -94,8 +94,10 @@ export default {
     this.provider.on("status", (event) => {
       this.status = event.status;
     });
-
+    ydoc.destroy;
     window.ydoc = ydoc;
+    //debugger
+    console.log(ydoc);
 
     this.indexdb = new IndexeddbPersistence(this.room, ydoc);
 
@@ -121,28 +123,6 @@ export default {
           limit: 10000,
         }),
       ],
-      content: `
-        <h1>
-          Hi there,
-        </h1>
-        
-        <p>
-          this is a <em>basic</em> example of <strong>VROOM</strong>. 
-        </p>
-      
-        <p>
-          Isn’t that great? And all of that is editable. 
-        </p>
-        
-        <p>
-          I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
-        </p>
-        <blockquote>
-          Wow, that’s amazing. Good Luck! 👏
-          <br />
-          — VROOM Wizard
-        </blockquote>
-      `,
     });
 
     localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
@@ -209,9 +189,13 @@ export default {
     },
   },
 
-  beforeUnmount() {
+  clearHistory() {
     this.editor.destroy();
     this.provider.destroy();
+  },
+  clearContent() {
+    this.editor.clearContent(true);
+    this.editor.focus();
   },
 };
 </script>

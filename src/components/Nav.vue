@@ -48,7 +48,10 @@
       </label>
       <input type="checkbox" class="hidden" id="menu-toggle" />
 
-      <div class="hidden md:flex md:w-1/2 w-screen md:justify-around" id="menu">
+      <div
+        class="hidden md:flex md:w-1/2 w-screen md:justify-between uppercase"
+        id="menu"
+      >
         <nav>
           <ul
             class="
