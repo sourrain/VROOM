@@ -87,7 +87,7 @@ export default {
   mounted() {
     const ydoc = new Y.Doc();
     this.provider = new WebsocketProvider(
-      "wss://www.vroom-theatre.com//",
+      "ws://10.180.1.164:8080/",
       this.room,
       ydoc
     );
@@ -123,6 +123,13 @@ export default {
           limit: 10000,
         }),
       ],
+      contents: `
+      <strong>Hi there,</strong>
+      <p>
+this is a basic example of VROOM.
+Isn’t that great? And all of that is editable.
+I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit around. Don’t forget to check the other examples too.
+Wow, that’s amazing. Good Luck! 👏 — VROOM Wizard</p>`,
     });
 
     localStorage.setItem("currentUser", JSON.stringify(this.currentUser));
