@@ -94,7 +94,7 @@ export default {
     this.provider.on("status", (event) => {
       this.status = event.status;
     });
-    ydoc.destroy;
+
     window.ydoc = ydoc;
     //debugger
     console.log(ydoc);
