@@ -1,14 +1,35 @@
 <template>
   <div>
-    <undercontruction />
+    <BlogPost />
+    <BlogPost />
   </div>
 </template>
 
 <script>
-import Undercontruction from "../components/Undercontruction.vue";
+import BlogPost from "../components/BlogPost.vue";
 export default {
-  components: {
-    Undercontruction,
+  components: { BlogPost },
+  data() {
+    return {
+      welcome: {
+        title: "Welcome!",
+        blogPost: "Welcome to VROOM notebook gallery.",
+        welcome: true,
+        photo: "sky",
+      },
+      sampleBlogPost: [
+        {
+          title: "This is sample notebook",
+          blogHTML: "This is notebook",
+          blogCoverPhoto: "designed-for-everyone",
+        },
+        {
+          title: "This is sample notebook",
+          blogHTML: "This is notebook",
+          blogCoverPhoto: "designed-for-everyone",
+        },
+      ],
+    };
   },
 };
 </script>
