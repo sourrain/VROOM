@@ -4,6 +4,10 @@ import Community from '../views/Community.vue'
 import Home from '../views/Home.vue'
 import Theatre from '../views/Theatre.vue'
 import Company from '../views/Company.vue'
+import Notebooks from '../views/Notebooks.vue'
+import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
+import ForgotPassword from '../views/ForgotPassword.vue'
 
 const routes = [
   {
@@ -30,6 +34,26 @@ const routes = [
     path: '/community',
     name: 'Community',
     component: Community
+  },
+  {
+    path: '/notebooks',
+    name: 'Notebooks',
+    component: Notebooks
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/forgotPassword',
+    name: 'ForgotPassword',
+    component: ForgotPassword
   }
 ]
 

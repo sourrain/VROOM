@@ -1,9 +1,9 @@
 <template>
   <div>
-    <template v-for="(item, index) in items" :key="index">
+    <div v-for="(item, index) in items" :key="index">
       <div class="divider" v-if="item.type === 'divider'" />
       <menu-item v-else v-bind="item" />
-    </template>
+    </div>
     <!-- <button @click="addImage">add image from URL</button> -->
   </div>
 </template>

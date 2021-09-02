@@ -4,9 +4,8 @@
       :editor="editor"
       class="p-1 flex-wrap flex justify-items-center border-b-4 border-black"
     />
-    <editor-content :editor="editor" class="mt-5" />
+    <editor-content :editor="editor" class="mt-5 prose" />
     <div class="text-gray-400">
-      <img class="h-40" src="../assets/vroom99.png" />
       {{ editor.getCharacterCount() }}/{{ limit }} characters
     </div>
     <div
@@ -97,7 +96,6 @@ export default {
 
     window.ydoc = ydoc;
     //debugger
-    console.log(ydoc);
 
     this.indexdb = new IndexeddbPersistence(this.room, ydoc);
 

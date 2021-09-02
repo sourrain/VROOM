@@ -7,6 +7,7 @@
 <script>
 import Undercontruction from "../components/Undercontruction.vue";
 export default {
+  name: "notebooks",
   components: {
     Undercontruction,
   },

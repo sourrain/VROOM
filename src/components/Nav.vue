@@ -5,7 +5,7 @@
         flex flex-wrap
         items-center
         bg-white bg-opacity-90
-        blur-xl
+        blur-lg
         text-base
         justify-between
         md:fixed
@@ -23,86 +23,92 @@
         </router-link>
         <div
           class="
-            md:w-32
-            w-22
-            md:px-2
-            md:py-0.5
+            lg:px-1
+            lg:py-0.5
+            p-0.5
             rounded-md
-            bg-white
-            text-black
-            border-black border-collapse
-            md:border-2
-            md:tracking-tight
-            md:font-extrabold
-            font-medium
-            text-xs
+            bg-black
+            text-white
             tracking-tighter
+            text-xs
+            md:font-bold
           "
         >
-          1.0 PROTOTYPE
+          1.0 BETA
         </div>
       </div>
 
-      <label for="menu-toggle" class="md:hidden mr-2 cursor-pointer block">
+      <label for="menu-toggle" class="lg:hidden mr-2 cursor-pointer block">
         <i class="ri-menu-3-fill ri-2x"></i>
       </label>
       <input type="checkbox" class="hidden" id="menu-toggle" />
 
       <div
-        class="hidden md:flex md:w-1/2 w-screen md:justify-between uppercase"
+        class="hidden lg:flex lg:w-5/6 w-screen lg:justify-between uppercase"
         id="menu"
       >
-        <nav>
-          <ul
-            class="
-              md:flex-wrap md:flex
-              md:justify-between
-              justify-center
-              text-base
-              pl-20
-              items-center
-            "
-          >
-            <li>
-              <router-link class="md:p-4 py-3 px-0 block" to="/pricing"
-                >Pricing</router-link
-              >
-            </li>
-            <li>
-              <router-link class="md:p-4 py-3 px-0 block" to="/community"
-                >Community</router-link
-              >
-            </li>
-            <li>
-              <router-link class="md:p-4 py-3 px-0 block" to="/theatre"
-                >Theatre</router-link
-              >
-            </li>
-            <li>
-              <router-link class="md:p-4 py-3 px-0 block" to="/company"
-                >Company</router-link
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul class="lg:flex-wrap lg:flex items-center">
+          <li>
+            <router-link class="md:p-4 py-3 px-0 block" to="/pricing"
+              >Pricing</router-link
+            >
+          </li>
+          <li>
+            <router-link class="md:p-4 py-3 px-0 block" to="/notebooks"
+              >Notebooks</router-link
+            >
+          </li>
+          <li>
+            <router-link class="md:p-4 py-3 px-0 block" to="/community"
+              >Community</router-link
+            >
+          </li>
+          <li>
+            <router-link class="md:p-4 py-3 px-0 block" to="/theatre"
+              >Theatre</router-link
+            >
+          </li>
+          <li>
+            <router-link class="md:p-4 py-3 px-0 block" to="/company"
+              >Company</router-link
+            >
+          </li>
 
-      <div
-        class="w-1/4 p-4 items-center md:flex justify-evenly md:visible hidden"
-      >
-        <div
-          class="
-            px-3.5
-            py-0.5
-            rounded-xl
-            bg-white
-            text-black
-            border-black border-collapse border-2
-          "
-        >
-          Log in
-        </div>
-        <div class="px-3.5 py-1.5 rounded-xl bg-black text-white">Sign up</div>
+          <li class="lg:ml-40 lg:m-6">
+            <router-link
+              to="/login"
+              class="
+                px-2.5
+                py-0.5
+                block
+                lg:rounded-lg
+                lg:bg-white
+                text-white
+                bg-black
+                lg:text-black
+                lg:border-black lg:border-4
+              "
+            >
+              Log in
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/Register"
+              class="
+                px-2.5
+                py-1.5
+                lg:m-1
+                lg:rounded-lg
+                bg-black
+                text-white
+                block
+              "
+            >
+              Sign up
+            </router-link>
+          </li>
+        </ul>
       </div>
     </header>
   </div>
