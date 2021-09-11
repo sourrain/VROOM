@@ -13,3 +13,4 @@ firebase.auth().onAuthStateChanged(() => {
         createApp(App).use(store).use(router).mount('#app')
     }
 })
+
