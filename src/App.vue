@@ -1,9 +1,5 @@
 <template>
   <div id="app" class="flex-col justify-items-stretch">
-    <meta
-      name="facebook-domain-verification"
-      content="pp4pbn29valwbhnq2hsno03l28jgkn"
-    />
     <Navigation v-if="!navigation" />
     <router-view class="min-h-screen mt-5 md:mt-40"></router-view>
     <FooterInfo v-if="!navigation" />
